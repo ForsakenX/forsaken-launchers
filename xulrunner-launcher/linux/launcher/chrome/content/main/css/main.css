@@ -1,0 +1,47 @@
+
+tabbox { margin:0; }
+tabpanels { padding:0; }
+#main-area { margin:1em; }
+
+#main-area,
+#status-bar-left,
+#main-tabbox,
+#main-tabpanels,
+menulist,
+textbox {
+  -moz-box-flex:1;
+}
+
+#options-name-col { -moz-box-flex:1; }
+#options-selected-col { -moz-box-flex:0; }
+
+description { text-align:center; }
+
+#main-tabpanels > tabpanel {
+  -moz-box-orient:vertical;
+}
+
+#actions {
+  -moz-box-pack:end;
+}
+
+#main-area > hbox {
+  -moz-box-align:center;
+}
+
+#main-area > hbox > label {
+  width:4em;
+  text-align:right;
+}
+
+#version-update-button {
+	list-style-image:url("chrome://main/content/images/reload.png");
+}
+
+#version-download-button {
+	list-style-image:url("chrome://main/content/images/download.png");
+}
+
+
+
+

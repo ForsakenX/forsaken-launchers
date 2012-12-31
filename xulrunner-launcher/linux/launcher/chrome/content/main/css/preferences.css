@@ -1,0 +1,7 @@
+
+prefpane textbox,
+prefpane { -moz-box-flex:1; }
+
+prefpane hbox { -moz-box-align: center; }
+
+prefpane label { width:5em; min-width:5em; }

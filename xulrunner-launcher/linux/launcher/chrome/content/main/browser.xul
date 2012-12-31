@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://main/content/css/browser.css" type="text/css"?>
+<!DOCTYPE window SYSTEM "chrome://main/locale/browser.dtd">
+<window
+  id="browser-window"
+  title="&window.title;"
+  persist="width height screenX screenY"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <browser type="content" src=""
+           homepage="http://fly.thruhere.net"/>
+
+</window>

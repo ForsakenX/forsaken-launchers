@@ -1,0 +1,12 @@
+Download the launcher bellow.
+
+UPGRADE: simply install over the last installation.
+
+LINUX:	click on linux directory.
+
+NOTES:
+
+	Installer is made with nsis.
+
+	Launcher is made with Mozilla XulRunner.
+

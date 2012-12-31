@@ -1,0 +1,7 @@
+<!ENTITY  brandShortName        "Launcher">
+<!ENTITY  brandFullName         "ProjectX Launcher">
+<!ENTITY  vendorShortName       "ProjectX">
+<!ENTITY  version               "0.2.1">
+<!ENTITY  author.surName        "Deadly Methods">
+<!ENTITY  author.realName       "Daniel Aquino">
+<!ENTITY  author.email          "mr.danielaquino@gmail.com">

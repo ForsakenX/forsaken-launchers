@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://mozapps/content/preferences/preferences.css" type="text/css"?>
+<?xml-stylesheet href="chrome://main/content/css/preferences.css" type="text/css"?>
+<prefwindow
+  id="preferences-window"
+  title="Preferences"
+  instantApply="true"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <prefpane id="projectx-pane" label="ProjectX" image="chrome://icons/content/default.png">
+    <preferences>
+      <preference id="projectx-folder" name="projectx.folder" type="string"/>
+      <preference id="urls-latest" name="urls.latest" type="string"/>
+      <preference id="urls-games" name="urls.games" type="string"/>
+      <preference id="wine-path" name="wine.path" type="string"/>
+    </preferences>
+    <description>
+      ProjectX Settings
+    </description>
+    <hbox>
+      <label value="Data Folder:"/>
+      <textbox preference="projectx-folder"/>
+      <button id="projectx-folder-button" label="Browse"/>
+      <button id="projectx-folder-download-button" label="Download" hidden="true"/>
+    </hbox>
+    <hbox>
+      <label value="Latest Version URL:"/>
+      <textbox preference="urls-latest"/>
+    </hbox>
+    <hbox>
+      <label value="Games URL:"/>
+      <textbox preference="urls-games"/>
+    </hbox>
+    <bbox>
+      <label value="Wine (linux)"/>
+      <textbox preference="wine-path"/>
+      <button id="wine-path-button" label="Browse"/>
+    </bbox>
+  </prefpane>
+
+  <prefpane id="chat-pane" label="Chat" image="chrome://icons/content/chat.png">
+    <preferences>
+      <preference id="irc-server" name="irc.server" type="string"/>
+      <preference id="irc-port" name="irc.port" type="int"/>
+      <preference id="irc-channels" name="irc.channels" type="string"/>
+      <preference id="irc-nick" name="irc.user" type="string"/>
+    </preferences>
+    <description>
+      Chat settings.
+    </description>
+    <hbox>
+      <label value="Server:"/>
+      <textbox preference="irc-server"/>
+    </hbox>
+    <hbox>
+      <label value="Port:"/>
+      <textbox preference="irc-port" type="number"/>
+    </hbox>
+    <hbox>
+      <label value="Channels:"/>
+      <textbox preference="irc-channels"/>
+    </hbox>
+    <hbox>
+      <label value="Nick:"/>
+      <textbox preference="irc-nick"/>
+    </hbox>
+    <script src="chrome://main/content/js/preferences.js"/>
+  </prefpane>
+
+</prefwindow>

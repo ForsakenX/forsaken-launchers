@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://main/content/css/main.css" type="text/css"?>
+<?xml-stylesheet href="chrome://main/content/css/tree.css" type="text/css"?>
+<window
+  id="main"
+  windowtype="main-window"
+  title="ProjectX Launcher Beta"
+  persist="screenX screenY width height"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  xmlns:html="http://www.w3.org/1999/xhtml">
+
+  <script src="chrome://main/content/js/logs.js"/>
+  <script src="chrome://main/content/js/jquery-1.2.3.js" />
+  <script src="chrome://main/content/js/jquery.timers.js" />
+  <script src="chrome://main/content/js/jslib.js" />
+  <script src="chrome://main/content/js/tree.js" />
+  <script src="chrome://main/content/js/main.js" />
+
+  <menubar>
+    <menu label="File" accesskey="f">
+      <menupopup>
+	      <!-- 
+	      	<menuitem id="chat-button" label="Chat Window"/>
+	        <menuseparator/>
+		-->
+        <menuitem id="quit-button" label="Quit"/>
+      </menupopup>
+    </menu>
+    <menu label="Tools" accesskey="t">
+      <menupopup>
+        <menuitem id="settings-button" label="Settings"/>
+        <menuitem id="browser-button" label="Browser"/>
+        <menuitem id="about-config-button" label="about:config"/>
+        <menuitem id="log-button" label="Log Window"/>
+        <menuseparator/>
+        <menuitem id="downloads-button" label="Download Manager"/>
+        <menuitem id="extension-manager-button" label="Extension Manager"/>
+        <menuitem id="theme-manager-button" label="Theme Manager"/>
+      </menupopup>
+    </menu>
+    <menu label="Help" accesskey="h">
+      <menupopup>
+        <menu label="Dev" accesskey="d">
+          <menupopup id="menu_ToolsPopup">
+	    <menuitem id="reload-button" label="Reload Chrome"/>
+	    <menuitem id="domi-button" label="DOM Inspector"/>
+	    <menuseparator/>
+          </menupopup>
+        </menu>
+        <menuseparator/>
+        <menuitem id="about-button" label="About"/>
+      </menupopup>
+    </menu>
+  </menubar>
+
+  <vbox id="main-area">
+
+          <!--
+           <description class="indent">
+             Select set of options to launch with.
+           </description>
+
+           <tree id="options-tree" persist="selectedItem"
+                 enableColumnDrag="true" editable="true"
+                 datasources="#configs" querytype="xml" ref="*">
+          
+            <treecols>
+              <treecol id="options-name-col" label="Name"
+                sort="?name" persist="width ordinal hidden"
+                sortActive="true" sortDirection="ascending"/>
+              <splitter class="tree-splitter"/>
+              <treecol id="options-selected-col" label="Selected"
+                       sort="?selected" persist="width ordinal hidden"
+                       type="checkbox" cycler="true"/>
+            </treecols>
+          
+            <template>
+              <query expr="option"/>
+              <action>
+                <treechildren>
+                  <treeitem uri="?">
+                    <treerow>
+                      <treecell label="?name"/>
+                      <treecell editable="true"/>
+                    </treerow>
+                  </treeitem>
+                </treechildren>
+              </action>
+            </template>
+          
+          </tree>
+       
+          <hbox class="toolbox">
+            <button id="new-config-button" label="Create"
+                    tooltiptext="Create a new config."/>
+            <button id="edit-config-button" label="Edit"
+                    tooltiptext="Edit last selected config."/>
+                </hbox>
+                -->
+
+
+    <hbox id="version-area">
+      <label value="Version:"/>
+      <menulist id="version-template"
+                datasources="#does-not-exist" querytype="xml" ref="*">
+        <template>
+          <query expr="version"/>
+          <action>
+            <menupopup>
+              <menuitem uri="?" label="?name"/>
+            </menupopup>
+          </action>
+        </template>
+      </menulist>
+      <toolbarbutton id="version-download-button"
+		tooltiptext="Download a new version."/>
+      <toolbarbutton id="version-update-button"
+	       tooltiptext="Rescan game directory and check for latest version."/>
+    </hbox>
+
+    <hbox>
+      <label value="Game:"/>
+      <menulist id="game-template"
+                datasources="#does-not-exist" querytype="xml" ref="*">
+        <template>
+          <query expr="game"/>
+          <action>
+            <menupopup>
+              <menuitem uri="?" value="?ip" label="?nick (?ip^) ?started_at"/>
+            </menupopup>
+          </action>
+        </template>
+      </menulist>
+    </hbox>
+
+    <hbox id="actions">
+      <button id="host-button" label="Host" tooltiptext="Host game."/>
+      <button id="join-button" label="Join" tooltiptext="Join the game!"/>
+      <button id="launch-button" label="Launch" tooltiptext="Launch game."/>
+    </hbox>
+
+  </vbox> <!-- end main-area -->
+
+  <statusbar id="status-bar" >
+    <statusbarpanel id="status-bar-left" label="Status Bar"/>
+  </statusbar>
+  
+</window>

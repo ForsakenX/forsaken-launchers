@@ -1,0 +1,40 @@
+You have to have a valid XulRunner installation to run the launcher.
+
+It is being developed for xr1.9.
+
+So you can ge the nightly build of xr1.9pre from this url:
+
+http://ftp.mozilla.org/pub/mozilla.org/xulrunner/nightly/latest-trunk/
+
+You can google for the official 1.8 release as it works fine there so far.
+
+Note: XML Templates were added in ff3 so they may not work in all 1.8 releases...
+
+You can unzip xulrunner archive to anywhere you want and install it using the following two options:
+
+--register-user
+--register-global
+
+The first one installs to a user's profile directory.
+
+The second installs to a system wide location (you must have rights to do this).
+
+Example:
+
+./xulrunner --register-user
+
+Once you do then this version of xulrunner will be registered and you can simply execute the launcher via it's stub file.
+
+Example:
+
+./launcher
+./launcher.exe
+
+To create a stub file simply copy xulrunner-stub to the launcher directory and rename it to launcher[.exe]... 
+
+If you want you can also launch the program directly like so:
+
+./xulrunner ./path/to/launcher/application.ini
+
+
+

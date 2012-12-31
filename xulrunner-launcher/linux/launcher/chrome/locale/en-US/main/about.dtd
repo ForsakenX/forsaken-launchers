@@ -1,0 +1,12 @@
+<!ENTITY window.title    "ProjectX Launcher">
+<!ENTITY version.label   "Version">
+<!ENTITY author.title    "Author">
+<!ENTITY author.name.label "Name">
+<!ENTITY author.surname.label "Surname">
+<!ENTITY author.email.label "Email">
+<!ENTITY build.label "BuilID">
+<!ENTITY name.label "Name">
+<!ENTITY application.title "Application">
+<!ENTITY platform.title "Platform">
+<!ENTITY platform.name "Toolkit">
+<!ENTITY website.title "Web Site">

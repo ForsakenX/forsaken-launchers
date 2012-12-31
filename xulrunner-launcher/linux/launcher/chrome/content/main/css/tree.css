@@ -1,0 +1,30 @@
+
+tree,
+treecol {
+  -moz-box-flex:1;
+}
+
+treechildren::-moz-tree-cell {
+  border-color: #ddd;
+  border-style: solid;
+  border-width: 1px;
+  padding:0.2em;
+}
+
+treechildren::-moz-tree-cell(selected) {
+  background-color: blue;
+}
+
+treechildren::-moz-tree-row {
+  height:1.9em;
+}
+
+treechildren::-moz-tree-row(odd) {
+  background-color: #E3E3E3;
+}
+
+treechildren::-moz-tree-row(even) {
+  background-color: #F3F3F3;
+}
+
+

@@ -1,0 +1,16 @@
+<!ENTITY  window.title    "Log Window">
+<!ENTITY  save            "Save">
+<!ENTITY  clear           "Clear">
+<!ENTITY  pause           "Pause">
+<!ENTITY  filter          "Filter">
+<!ENTITY  level           "Level">
+<!ENTITY  all             "All">
+<!ENTITY  misc            "Misc">
+<!ENTITY  info            "Info">
+<!ENTITY  warning         "Warning">
+<!ENTITY  error           "Error">
+<!ENTITY  fatal           "Fatal Error">
+<!ENTITY  severity        "Severity">
+<!ENTITY  type            "Type">
+<!ENTITY  message         "Message">
+<!ENTITY  time            "Time">

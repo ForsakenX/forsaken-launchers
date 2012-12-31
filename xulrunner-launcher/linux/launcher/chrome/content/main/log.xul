@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://main/content/css/tree.css" type="text/css"?>
+<?xml-stylesheet href="chrome://main/content/css/log.css" type="text/css"?>
+<!DOCTYPE window SYSTEM "chrome://main/locale/log.dtd">
+<window
+  id="log-window"
+  title="&window.title;"
+  windowtype="log-window"
+  persist="width height screenX screenY"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  xmlns:html="http://www.w3.org/1999/xhtml">
+
+  <script src="chrome://main/content/js/logs.js"/>
+  <script src="chrome://main/content/js/jquery-1.2.3.js" />
+  <script src="chrome://main/content/js/jquery.livequery.js" />
+  <script src="chrome://main/content/js/jslib.js" />
+  <script src="chrome://main/content/js/tree.js" />
+  <script src="chrome://main/content/js/log.js"/>
+
+  <toolbox>
+    <toolbar>
+      <toolbarbutton id="save" label="&save;"/>
+      <toolbarbutton id="clear" label="&clear;"/>
+      <toolbarseparator class="groove"/>
+      <toolbarbutton id="pause" label="&pause;"/>
+      <toolbarseparator class="groove"/>
+      <toolbaritem id="filter-item">
+        <label value="&filter;"/>
+        <textbox id="filter" value="" disabled="true"/>
+      </toolbaritem>
+      <toolbarseparator class="groove"/>
+      <toolbaritem>
+        <label value="&level;"/>
+        <menulist id="level" disabled="true">
+          <menupopup>
+            <menuitem label="&all;"/>
+            <menuitem label="&misc;"/>
+            <menuitem label="&info;"/>
+            <menuitem label="&warning;"/>
+            <menuitem label="&error;"/>
+            <menuitem label="&fatal;"/>
+          </menupopup>
+        </menulist>
+      </toolbaritem>
+    </toolbar>
+  </toolbox>
+
+  <tree id="log" enableColumnDrag="true"
+        datasources="#does-not-exist" querytype="xml" ref="*">
+
+   <treecols>
+     <treecol id="log-time-col" label="&time;" persist="width ordinal hidden"
+              sort="?time" sortActive="true" sortDirection="ascending"/>
+
+     <splitter class="tree-splitter"/>
+
+     <treecol id="log-severity-col" label="&severity;"
+              sort="?severity" persist="width ordinal hidden"/>
+
+     <splitter class="tree-splitter"/>
+
+     <treecol id="log-type-col" label="&type;"
+              sort="?type" persist="width ordinal hidden"/>
+
+     <splitter class="tree-splitter"/>
+
+     <treecol id="log-message-col" label="&message;"
+              sort="?message" persist="width ordinal hidden"/>
+
+   </treecols>
+
+   <template>
+     <query expr="entry"/>
+     <action>
+       <treechildren>
+         <treeitem uri="?" class="?severity">
+           <treerow>
+             <treecell label="?time"/>
+             <treecell label="?severity"/>
+             <treecell label="?type"/>
+             <treecell label="?message"/>
+           </treerow>
+         </treeitem>
+       </treechildren>
+     </action>
+   </template>
+
+ </tree>
+
+</window>

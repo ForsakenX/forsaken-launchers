@@ -1,0 +1,112 @@
+
+
+/*
+ *  Chat Window
+ */
+
+
+tabbox,
+tab,
+tabs,
+tabpanels,
+browser,
+iframe,
+tabpanel,
+#raw-panel { -moz-box-flex:1; }
+
+tab { text-align:center; }
+tab.raw,
+tab.system,
+tab.normal { font-weight:bold; }
+tab.system { color:gray; }
+tab.normal { color:red; }
+
+#raw-panel { -moz-box-orient:vertical; }
+
+
+
+/*
+ *  Panels
+ */
+
+
+#panel {
+   /*background-color:transparent; linux only */
+}
+
+/*#topic,*/
+#scroller,
+#content,
+#raw-content,
+#center,
+#raw-scroller { -moz-box-flex:1; }
+
+#scroller,
+#raw-scroller { -moz-appearance: textfield; }
+
+#message,
+#raw-message {  }
+
+#topic-wrapper { -moz-box-flex:1; }
+#topic-holder { padding:0.5em !important; }
+
+#scroller,
+#raw-scroller { overflow: auto; }
+
+#message,
+#raw-message { margin:0; }
+
+#content,
+#raw-content,
+#topic,
+.line,
+.line label { -moz-user-select: text; } 
+
+.line {
+  padding:0.2em 0.1em;
+  line-height:1em;
+}
+
+.line label  {padding:0;margin:0 0.2em 0 0;}
+.line.system {font-weight:bold;}
+.line.raw    {font-weight:bold; color:gray;}
+
+
+/*
+ *  Users
+ */
+
+
+#users,
+#users-wrapper {
+  padding:0 !important;
+  margin:0 !important;
+}
+
+#users-total { text-align:center; }
+
+#users { 
+  -moz-box-flex:1;
+  overflow: auto; 
+}
+
+
+/*
+ *  Icons
+ */
+
+
+.undo_icon { 
+  list-style-image:
+   url(moz-icon://stock/gtk-undo?size=menu); }
+
+.redo_icon {
+  list-style-image:
+   url(moz-icon://stock/gtk-redo?size=menu); }
+
+.copy_icon {
+  list-style-image:
+   url(moz-icon://stock/gtk-copy?size=menu); }
+
+
+

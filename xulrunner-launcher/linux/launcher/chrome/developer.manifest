@@ -1,0 +1,4 @@
+
+# Extension Developers Overlay
+overlay chrome://main/content/main.xul chrome://xulrunnerdev/content/devOverlay.xul
+

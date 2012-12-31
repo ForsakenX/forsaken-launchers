@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://chat/content/css/chat.css" type="text/css"?>
+<window
+  id="chat"
+  title="Chat Beta"
+  persist="screenX screenY width height" 
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  xmlns:html="http://www.w3.org/1999/xhtml">
+
+  <script src="chrome://main/content/js/jquery-1.2.3.js" />
+  <script src="chrome://main/content/js/jquery.livequery.js" />
+  <script src="chrome://chat/content/js/chat.js" />
+
+  <menupopup id="line-context">
+    <menuitem id="copy-line" label="Copy" class="copy_icon menuiconic"/>
+  </menupopup>
+
+  <menubar>
+    <menu label="Conversation">
+      <menupopup>
+        <menuitem label="Find" disabled="true"/>
+        <menuitem label="Save As" disabled="true"/>
+        <menuseparator/>
+        <menuitem label="Invite" disabled="true"/>
+        <menuseparator/>
+        <menuitem id="close-window" label="Close Chat"/>
+      </menupopup>
+    </menu>
+    <menu label="Edit">
+	    <menupopup>
+		    <menuitem id="undo" label="Undo" class="undo_icon" disabled="true"/>
+		    <menuitem id="redo" label="Redo" class="redo_icon" disabled="true"/>
+	    </menupopup>
+   </menu>
+   <menu label="Commands">
+	    <menupopup id="irc-commands">
+			  <menuitem id="irc-command-help" label="Help"/>
+			  <menuitem id="irc-command-nick" label="Change Nick"/>
+			  <menuitem id="irc-command-action" label="Imply Action"/>
+			  <menuitem id="irc-command-clear" label="Clear"/>
+	    </menupopup>
+    </menu>
+    <menu label="Options">
+      <menupopup>
+        <menuitem id="option-show-time" label="Show Timestamps" type="checkbox" disabled="true"/>
+        <menuitem id="option-enable-sounds" label="Enable Sounds" type="checkbox" disabled="true"/>
+        <menuitem id="option-time-format" label="Time Format" disabled="true"/>
+      </menupopup>
+    </menu>
+    <menu label="Account">
+      <menupopup>
+        <menuitem id="account-change-nick" label="Change Nick"/>
+      </menupopup>
+    </menu>
+    <menu label="General">
+      <menupopup>
+        <menuitem label="Channel List" disabled="true"/>
+      </menupopup>
+    </menu>
+  </menubar>
+
+  <tabbox>
+    <hbox>
+      <tabs>
+        <tab id="raw-tab" label="Raw" context="tab-context"/>
+      </tabs>
+      <toolbarbutton id="tab-close" label="Close" class="close_icon menuiconic"/>
+    </hbox>
+    <tabpanels>
+      <tabpanel id="raw-panel">
+        <scrollbox id="raw-scroller">
+          <vbox id="raw-content">
+          </vbox>
+        </scrollbox>
+        <splitter/>
+        <textbox id="raw-message" multiline="true" spellcheck="true"/>
+      </tabpanel>
+    </tabpanels>
+  </tabbox>
+
+</window>

@@ -1,0 +1,4 @@
+content extensiondev jar:extensiondev.jar!/content/extensiondev/ xpcnativewrappers=no
+locale extensiondev en-US jar:extensiondev.jar!/locale/en-US/extensiondev/
+skin extensiondev classic jar:extensiondev.jar!/skin/classic/extensiondev/
+

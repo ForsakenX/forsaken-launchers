@@ -1,0 +1,26 @@
+#http://developer.mozilla.org/en/docs/chrome.manifest
+
+#content packagename uri/to/files/ [flags]
+#locale packagename localename uri/to/files/ [flags]
+#skin packagename skinname uri/to/files/ [flags]
+
+#overlay chrome://URI-to-be-overlayed chrome://overlay-URI [flags]
+#style chrome://URI-to-style chrome://stylesheet-URI [flags]
+#override chrome://package/type/original-uri.whatever new-resolved-URI [flags]
+
+locale branding en-US file:locale/en-US/branding/
+
+content main file:content/main/
+locale main en-US file:locale/en-US/main/
+resource main file:resource/main/
+
+content chat file:content/chat/
+locale chat en-US file:locale/en-US/chat/
+
+content icons file:icons/default/
+
+skin communicator classic/1.0 skin/communicator/
+
+#style chrome://main/content/chat_panel.xul chrome://main/content/css/chat_panel_linux.css os=Linux
+
+

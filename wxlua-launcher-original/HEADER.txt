@@ -1,0 +1,7 @@
+Download the launcher bellow.
+
+Windows users download the *.exe versions.
+
+Launcher is made with wxLua.
+
+Check out http://fly.thruhere.net/launcher for another similar project.

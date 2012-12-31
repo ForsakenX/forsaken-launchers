@@ -1,0 +1,22 @@
+
+description {
+  -moz-box-flex:1;
+  margin:1em 0;
+  overflow:auto;
+}
+
+hbox > label {
+  width:5em;
+}
+
+#changes { -moz-box-flex:1; }
+
+a {
+  color: blue;
+  text-decoration:underline;
+}
+
+a:hover {
+  cursor:pointer;
+}
+

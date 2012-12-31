@@ -1,0 +1,27 @@
+
+/* box */
+
+toolbaritem { -moz-box-align:center; }
+#log { -moz-box-flex:1; }
+
+/* images */
+
+#pause { list-style-image:url(chrome://main/content/images/pause.png); }
+#clear { list-style-image:url(chrome://main/content/images/clear.png); }
+#save { list-style-image:url(chrome://main/content/images/save.png); }
+
+/* style */
+
+#log {
+  background-color:white;
+  overflow:auto;
+}
+
+#log-time-col     { -moz-box-flex:0; }
+#log-severity-col { -moz-box-flex:0; }
+#log-type-col     { -moz-box-flex:0; }
+#log-message-col  { -moz-box-flex:1; }
+
+#filter-item,
+#filter { -moz-box-flex:1; }
+
