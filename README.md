@@ -6,6 +6,6 @@ Today these aren't really used anymore although they may serve as a basis to cre
 
 ## Versions
 
-There was a rather full blown attempt at using Mozilla's XulRunner which even had full blown Irc lobby client integrated into it.
+There was a rather full blown attempt at using Mozilla's XulRunner which even had full blown Irc lobby client integrated into it.  There was plans to offer hot patches between users for custom models and auto updating abilities for forsaken folder that were never fully realized.
 
 And later two attempts at using wxLua to write a leaner version.
